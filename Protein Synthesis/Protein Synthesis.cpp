@@ -18,7 +18,6 @@ int main()
 		getline(cin, str1);
 		getline(cin, str2);
 		vector<char>vect1, vect2;
-		int count = 0;
 		for (auto x : str1)
 		{
 			vect1.push_back(x);
@@ -29,15 +28,8 @@ int main()
 		}
 		sort(vect1.begin(), vect1.end());
 		sort(vect2.begin(), vect2.end());
-		for (int i = 0; i < vect1.size(); i++)
-		{
-			if (vect1[i] != vect2[i])
-			{
-				count++;
-			}
-		}
 		i++;
-		count == 0 ? cout << "Case"<<i<<":YES\n" : cout << "Case"<<i<<":NO\n";
+		vect1==vect2 ? cout << "Case"<<i<<":YES\n" : cout << "Case"<<i<<":NO\n";
 	}
 	return 0;
 }
